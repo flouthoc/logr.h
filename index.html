@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Logr.h - micro library to create and view custom logs</title>
+	<meta name="description" content="MinimalCSS is a simple HTML / CSS template that is incredibly easy to customize. It can be downloaded and used with no limitations or obligations.">
+
+	<link href="minimal.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+</head>
+<body>
+<a href="https://github.com/flouthoc/uglipop.js">
+        <img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png">
+      </a>
+<div class="container">
+	<header>
+		<h1>Logr.h</h1>A <strong>micro</strong> library to create logs for your next <strong>POSIX</strong> thing.BSD Lisence
+		<nav class="float-right">
+			<ul>
+				<li>
+        <iframe src="http://ghbtns.com/github-btn.html?user=flouthoc&type=follow" height="30" width="100" frameborder="0" scrolling="0" style="width:168px; height: 30px;" allowTransparency="true"></iframe><iframe src="http://ghbtns.com/github-btn.html?user=flouthoc&repo=uglipop.js&type=watch" height="30" width="70" frameborder="0" scrolling="0" style="width:70px; height: 30px;" allowTransparency="true"></iframe><iframe src="http://ghbtns.com/github-btn.html?user=flouthoc&repo=uglipop.js&type=fork" height="30" width="70" frameborder="0" scrolling="0" style="width:70px; height: 30px;" allowTransparency="true"></iframe></p></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!--<div class="row"><div class="col-12"><p class="view"><a href="http://github.com/flouthoc/uglipop.js/">View the Project on GitHub</a></p>
+        <p>
+        <iframe src="http://ghbtns.com/github-btn.html?user=flouthoc&type=follow" height="30" width="100" frameborder="0" scrolling="0" style="width:168px; height: 30px;" allowTransparency="true"></iframe><iframe src="http://ghbtns.com/github-btn.html?user=flouthoc&repo=uglipop.js&type=watch" height="30" width="70" frameborder="0" scrolling="0" style="width:70px; height: 30px;" allowTransparency="true"></iframe><iframe src="http://ghbtns.com/github-btn.html?user=flouthoc&repo=uglipop.js&type=fork" height="30" width="70" frameborder="0" scrolling="0" style="width:70px; height: 30px;" allowTransparency="true"></iframe></p></div></div>-->
+
+	<div class="row">
+		<div class="col-12">
+		<center><img src="logr3.png"></center>
+		<p><pre><code class="language-c scroll-none">int writeLog(char *description,char *path,char *logType);char *description,char *path,char *logType);
+/*char *description - Your log Content or message*/
+/*char *path - path to your log file or NULL (will be written to file named 'data')*/
+/*char *logType - LogType can be (ERROR,WARNING,INFO,LOG,SUCCESS) so that log reader can perform filteration*/</code></pre></p><p><hr></p>
+
+				<!--<p><pre><code class="language-c scroll-none">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &quot;log.h&quot;
+
+int main(){
+
+	writeLog(&quot;Your Log Description&quot;,NULL,&quot;Log Type&quot;);
+	return 0;
+}
+</code></pre></p><p><hr></p>-->
+			
+			<h1>Example</h1>
+			<div class="row">
+			<div class="col-12">
+			<p><p><pre><code class="language-c scroll-none">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &quot;logr.h&quot;
+
+int main(){
+
+	writeLog(&quot;Your Log Description&quot;,NULL,&quot;Log Type&quot;);
+	return 0;
+}
+</code></pre></p><p><hr></p></p>
+</div>
+<div class="col-4">
+<h4>Description (string)</h4>
+The First Argument contains the basic content which should be contained in that particular log TAG.
+Example - <strong>"Hello my First LOG"</strong>.
+</div>
+<div class="col-4">
+<h4>Path (string)</h4>
+<p>
+Second Argument is path to the LOG FILE , path can be given in form of string like "file1" or you can leave it <strong>NULL</strong>
+it'll automatically create a log file named <strong>"data"</strong> and will store your all logs there.
+Example - "Hello my First LOG".</p>
+</div>
+<div class="col-4">
+<h4>logType (string)</h4>
+<p>
+Third Argument logtype which will be used by our <strong>logViewer</strong> to parse the content into appropriate colors according to priority.<br>
+<strong>WARNING or wr</strong> - To Specify Warning Content in logs
+<strong>ERROR or er</strong> - To Specify Error Content in logs
+<strong>INFO or in</strong> - To Specify Information Content in logs
+<strong>SUCCESS or su</strong> - To Specify Success Content in logs
+<strong>LOG or lg</strong> - To Specify Genral Content in logs</p>
+</div>
+</div>
+
+		</div>
+	<!-- col-8 -->
+	</div><!-- row -->
+<h3> Logr Automatically Logs Date and Time of Event</h3><br>
+<hr>
+<h4>However In Genral Case Logs are not in best manner to read.</h4>
+<center><img src="logr1.png"></center><br>
+<h4>So here's logrReader whcih parse's logs with beauty making it much eaiser to go through all your logs</h4>
+<center><img src="logr2.png"></center><br><br>
+<div class="row">
+<div class="col-6">
+
+<h1>Github / Fork it!</h1>
+<p class="view"><a href="http://github.com/flouthoc/uglipop.js/">View the Project on GitHub</a></p>
+        <p>
+        <iframe src="http://ghbtns.com/github-btn.html?user=flouthoc&type=follow" height="30" width="100" frameborder="0" scrolling="0" style="width:168px; height: 30px;" allowTransparency="true"></iframe><iframe src="http://ghbtns.com/github-btn.html?user=flouthoc&repo=uglipop.js&type=watch" height="30" width="70" frameborder="0" scrolling="0" style="width:70px; height: 30px;" allowTransparency="true"></iframe><iframe src="http://ghbtns.com/github-btn.html?user=flouthoc&repo=uglipop.js&type=fork" height="30" width="70" frameborder="0" scrolling="0" style="width:70px; height: 30px;" allowTransparency="true"></iframe></p></div>
+ <div class="col-6">
+ <h1>Lisence</h1>
+ This Project is under <strong>BSD Lisence</strong>
+ Contact me - flouthoc@gmail.com
+ </div>
+ </div>
+
+ </div>
+ </body>
+
+
+
+
+	<footer>
+
+	</footer><!-- footer -->
+</div>
+</body>
+</html>
