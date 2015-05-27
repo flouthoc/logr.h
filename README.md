@@ -1,6 +1,6 @@
 <h1>logr.h</h1><br>
 
-<h3>A micro header to create/view logs for your next <strong>POSIX</strong> thing.BSD LISENCE</h3><br>
+<h3>A micro header to create/view logs for your next <strong>POSIX</strong> thing.BSD LISENCE</h3>
 ![img](http://flouthoc.github.io/logr.h/logr3.png)
 
 
@@ -35,6 +35,6 @@ gcc logrReader.c stack.c parse.c -o logrReader
 ./logrReader <path-to-your-log_file>
 ```
 <br><br>
-<h2>Fork it!<h2>
+<h2>Fork it!</h2>
 <hr>
 flouthoc@gmail.com
