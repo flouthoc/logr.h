@@ -23,18 +23,5 @@ int main(){
 <h4>Build statement for example.c (logr.h)</h4>
 ```bash
 gcc test.c logr.c -o test
-```<br><br>
-<hr>
-<h1>Building logrReader</h1>
-```bash
-gcc logrReader.c stack.c parse.c -o logrReader
 ```
 
-<h3>Using logrReader</h3>
-```bash
-./logrReader <path-to-your-log_file>
-```
-<br><br>
-<h2>Fork it!</h2>
-<hr>
-flouthoc@gmail.com
