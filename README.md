@@ -24,4 +24,13 @@ int main(){
 ```bash
 gcc test.c logr.c -o test
 ```
+<hr>
+<h4> Building logrReader from logrReader.c </h4>
+```bash
+gcc logrReader.c stack.c parser.c -o logrReader
+```
+<h3>Using logrReader</h3>
+```bash
+./logrReader <path-to-log-file>
+```
 
