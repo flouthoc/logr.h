@@ -1,4 +1,4 @@
-<h1>logr.h</h1><br>
+<h1>logr.h</h1>
 <h2>Docs</h2> - http://flouthoc.github.io/logr.h/
 
 <h3>A micro header to create/view logs for your next <strong>POSIX</strong> thing.BSD LISENCE</h3>
@@ -34,4 +34,5 @@ gcc logrReader.c stack.c parser.c -o logrReader
 ```bash
 ./logrReader <path-to-log-file>
 ```
-
+<h1> Fork it!</h1>
+flouthoc@gmail.com
