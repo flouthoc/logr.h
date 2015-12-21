@@ -12,7 +12,6 @@
 #include "parser.h"
 
 void parse(stackNode **top){
-	char popbuf;
 	stackNode *top_fake = *top;
 	
 		while(top_fake->value == '<'){
