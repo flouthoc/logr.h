@@ -2,7 +2,7 @@
 <h2>Docs</h2> - http://flouthoc.github.io/logr.h/
 
 <h3>A micro header to create/view logs for your next <strong>POSIX</strong> thing.BSD LISENCE</h3>
-![img](http://flouthoc.github.io/logr.h/logr3.png)
+![logr](https://github.com/flouthoc/logr.h/blob/gh-pages/logr3.png)
 
 
 <h4>example.c</h4>
@@ -22,6 +22,7 @@ int main(){
 ```
 
 <h4>Build statement for example.c (logr.h)</h4>
+
 ```bash
 gcc test.c logr.c -o test
 ```
@@ -34,6 +35,7 @@ make test
 
 <hr>
 <h4> Building logrReader from logrReader.c </h4>
+
 ```bash
 gcc logrReader.c stack.c parser.c -o logrReader
 ```
@@ -45,6 +47,7 @@ make reader
 ```
 
 <h3>Using logrReader</h3>
+
 ```bash
 ./logrReader <path-to-log-file>
 ```
